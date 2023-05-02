@@ -1,4 +1,4 @@
-package br.rafaelSammarco.FirstProject.resourses;
+package br.rafaelSammarco.FirstProject.resources;
 
 import br.rafaelSammarco.FirstProject.entities.User;
 import org.springframework.http.ResponseEntity;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/users")
-public class UserResourse {
+public class UserResource {
 
     @GetMapping
     public ResponseEntity<User> findAll(){
