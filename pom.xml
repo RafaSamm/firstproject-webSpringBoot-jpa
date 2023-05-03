@@ -44,6 +44,7 @@
             <artifactId>ng-table</artifactId>
             <version>4.0.0</version>
         </dependency>
+
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
