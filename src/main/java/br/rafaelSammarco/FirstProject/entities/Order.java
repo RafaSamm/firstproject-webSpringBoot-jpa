@@ -37,7 +37,7 @@ public class Order implements Serializable {
 
     }
 
-    public Order(Long id, Instant moment, OrderStatus orderStatus ,User client) {
+    public Order(Long id, Instant moment, OrderStatus orderStatus, User client) {
         this.id = id;
         this.moment = moment;
         setOrderStatus(orderStatus);
@@ -65,7 +65,7 @@ public class Order implements Serializable {
     }
 
     public void setOrderStatus(OrderStatus orderStatus) {
-        if(orderStatus != null) {
+        if (orderStatus != null) {
             this.orderStatus = orderStatus.getCode();
         }
     }
@@ -88,6 +88,14 @@ public class Order implements Serializable {
 
     public Set<OrderItem> getItems() {
         return items;
+    }
+
+    public Double getTotal() {
+        double sum = 0.0;
+        for (OrderItem o: items) {
+            sum += o.getSubTotal();
+        }
+        return sum;
     }
 
     @Override
